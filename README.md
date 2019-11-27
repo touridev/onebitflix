@@ -14,10 +14,8 @@ Docker and a text editor. I'm using VSCode
 cd to the cloned folder
 ```
 $ docker-compose up -d --build
-
-$ docker-compose run web rake db:setup
-
-$ docker-compose run web rails s
+$ docker exec -i -t onebitflix_web_1 /bin/bash
+$ rake db:setup
 ```
 Go to http://localhost:3000 and the project is up and running!
 
