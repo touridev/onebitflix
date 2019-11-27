@@ -1,4 +1,4 @@
-# OneBitFlix With Docker
+# OneBitFlix With Docker WIP
 
 Project for a [Course](https://onebitcode.com/course/onebitflix-minicurso-rails-vuejs/) that has the purpose to code a NetFlix's clone using Rails, Vue.Js, but i added the Docker to study.
 
