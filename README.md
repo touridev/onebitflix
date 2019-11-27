@@ -1,6 +1,6 @@
 # OneBitFlix With Docker
 
-Project for a * [Course](https://onebitcode.com/course/onebitflix-minicurso-rails-vuejs/) that has the purpose to code a NetFlix's clone using Rails, Vue.Js, but i added the Docker to study.
+Project for a [Course](https://onebitcode.com/course/onebitflix-minicurso-rails-vuejs/) that has the purpose to code a NetFlix's clone using Rails, Vue.Js, but i added the Docker to study.
 
 ## Getting Started
 
@@ -8,21 +8,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-```
 Docker and a text editor. I'm using VSCode
-```
 
 ### Installing
-
+cd to the cloned folder
 ```
-cd to the clone folder
+$ docker-compose up -d --build
 
-docker-compose up -d --build
+$ docker-compose run web rake db:setup
 
-docker-compose run web rake db:setup
-
-docker-compose run web rails s
+$ docker-compose run web rails s
 ```
+Go to http://localhost:3000 and the project is up and running!
 
 ## Built With
 
@@ -34,7 +31,7 @@ docker-compose run web rails s
 
 ## Authors
 
-* **Renan Oliveira** - *Initial work* - [GitHub](https://github.com/lmaoclost)
+* **Renan Oliveira** - [GitHub](https://github.com/lmaoclost)
 
 ## License
 
