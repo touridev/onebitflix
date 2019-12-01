@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root :to => "home#index"
-  
-  /api/v1/
+
   namespace :api do
     namespace :v1 do
       get '/dashboard', to: 'dashboards#index', as: 'dashboard'
@@ -12,12 +11,14 @@ Rails.application.routes.draw do
       resources :searches, path: "search", only: :index
       resources :series, only: :show
       resources :movies, only: :show do
-      member do
-        get '/executions', to: 'executions#show'
-        put '/executions', to: 'executions#update'    
-      end
+        member do
+          get '/executions', to: 'executions#show'
+          put '/executions', to: 'executions#update'
+        end
       end
       resources :recommendations, only: :index
     end
   end
+
+  match "*path", to: "home#index", via: :get
 end
