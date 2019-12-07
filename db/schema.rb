@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_130514) do
+ActiveRecord::Schema.define(version: 2019_11_27_130516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "fuzzystrmatch"
@@ -62,11 +62,11 @@ ActiveRecord::Schema.define(version: 2019_11_27_130514) do
   create_table "players", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
-    t.time "elapsed_time"
     t.bigint "movie_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "elapsed_time"
     t.index ["movie_id"], name: "index_players_on_movie_id"
     t.index ["user_id"], name: "index_players_on_user_id"
   end
@@ -116,10 +116,12 @@ ActiveRecord::Schema.define(version: 2019_11_27_130514) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "users"
   add_foreign_key "movies", "categories"
   add_foreign_key "movies", "series", column: "serie_id"
   add_foreign_key "players", "movies"
   add_foreign_key "players", "users"
+  add_foreign_key "reviews", "users"
   add_foreign_key "series", "categories"
   add_foreign_key "series", "movies", column: "last_watched_episode_id"
 end
