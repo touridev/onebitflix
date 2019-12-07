@@ -8,9 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Docker and a text editor. I'm using VSCode
+Docker and a text editor. I'm using VSCode.
 
-### Installing
+## Installing
 cd to the cloned folder
 ```
 $ docker-compose up -d --build
@@ -18,8 +18,13 @@ $ docker exec -i -t onebitflix_web_1 /bin/bash
 $ rake db:setup
 ```
 Go to http://localhost:3000 and the project is up and running!
-
-If you're having trouble with the error "exec user process caused "no such file or directory", you can download [Dos2Unix](https://sourceforge.net/projects/dos2unix/) and convert the entrypoint.sh file to unix and build again. This problem appears because i'm using windows and the break line is different from unix.
+### Optionally
+The db/seeds.rb has my example with AWS, feel free to edit and run 
+```
+$ db:seed
+```
+## Know Issues
+If you're having trouble with the error "exec user process caused "no such file or directory"", you can download [Dos2Unix](https://sourceforge.net/projects/dos2unix/) and convert the entrypoint.sh file to unix and build again. This problem appears because i'm using windows and the break line is different from unix.
 
 ## Built With
 
