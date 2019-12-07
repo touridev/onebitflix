@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-
+gem 'aws-sdk-s3', '~> 1.58.0'
 # Autenticação
 gem 'devise', '~> 4.7.1'
 # Serialização do Json

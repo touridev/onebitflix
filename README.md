@@ -19,7 +19,7 @@ $ rake db:setup
 ```
 Go to http://localhost:3000 and the project is up and running!
 
-If you're having trouble with the error "exec user process caused "no such file or directory", you can download [Dos2Unix](https://sourceforge.net/projects/dos2unix/) and convert the entrypoint.sh file to unix. This problem appears because i'm using windows and the break line is different from unix.
+If you're having trouble with the error "exec user process caused "no such file or directory", you can download [Dos2Unix](https://sourceforge.net/projects/dos2unix/) and convert the entrypoint.sh file to unix and build again. This problem appears because i'm using windows and the break line is different from unix.
 
 ## Built With
 
