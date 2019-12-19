@@ -15,6 +15,7 @@ cd to the cloned folder
 ```
 $ docker-compose up -d --build
 $ docker exec -i -t onebitflix_web_1 /bin/bash
+$ yarn
 $ rake db:setup
 ```
 Go to http://localhost:3000 and the project is up and running!
