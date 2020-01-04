@@ -20,7 +20,7 @@ $ rake db:setup
 ```
 Go to http://localhost:3000 and the project is up and running!
 ### Optionally
-The db/seeds.rb has my example with AWS, feel free to edit and run 
+The db/seeds.rb has my example with the files inside the public folder, feel free to edit and run 
 ```
 $ db:seed
 ```
