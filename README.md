@@ -35,10 +35,6 @@ If you're having trouble with the error "exec user process caused "no such file 
 * [PostgreSQL](https://www.postgresql.org/) - Database
 * [Docker](https://www.docker.com//) - Used to create the development enviroment
 
-## Authors
-
-* **Renan Oliveira** - [GitHub](https://github.com/lmaoclost)
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
